@@ -18,14 +18,78 @@
       --border:rgba(255,255,255,.12);
       --brand:#5eead4;
     }
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial}
+    html,body{overflow-x:hidden;margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial}
     a{color:inherit}
     .muted{color:var(--muted)}
     .cardish{background:var(--panel);border:1px solid var(--border);border-radius:18px}
     .soft{background:var(--panel2);border:1px solid var(--border);border-radius:18px}
     .btn-outline-light{border-color:rgba(255,255,255,.28)}
     .nav{background:rgba(11,18,32,.75)!important}
-  </style>
+  
+
+/* Mobile navbar fixes */
+.nav-inner { width: 100%; padding-left: 16px !important; padding-right: 16px !important; }
+.navbar { max-width: 100%; }
+.navbar-toggler { margin-left: auto; }
+.navbar-collapse { width: 100%; }
+.navbar-nav { width: 100%; }
+
+
+
+/* Responsive hero/header text sizing */
+@media (max-width: 575.98px){
+  .hero h1{ font-size: 34px !important; line-height: 1.05 !important; }
+  .hero p{ font-size: 15px !important; }
+  h2{ font-size: 22px !important; }
+  .kicker{ font-size: 12px !important; letter-spacing: .18em !important; }
+}
+
+
+
+/* Brand text: keep visible on mobile but smaller */
+@media (max-width: 575.98px){
+  .navbar-brand span{ display:inline !important; font-size: 14px !important; letter-spacing: .1px !important; }
+  .navbar-brand img{ height: 28px !important; }
+  .navbar-brand{ max-width: 75vw; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
+
+
+
+/* Mobile dropdown alignment: open under hamburger, aligned left */
+@media (max-width: 991.98px){
+  .nav-inner{ position:relative; }
+  .navbar-collapse{
+    position:absolute;
+    left:16px;
+    right:16px;
+    top:calc(100% + 8px);
+    background:rgba(11,18,32,.96);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:16px;
+    padding:12px 14px;
+    box-shadow:0 18px 40px rgba(0,0,0,.35);
+  }
+  .navbar-nav{
+    width:100%;
+    margin-left:0 !important;
+    align-items:flex-start !important;
+    gap:6px !important;
+  }
+  .navbar-nav .nav-link{
+    width:100%;
+    padding:10px 10px;
+    border-radius:12px;
+  }
+  .navbar-nav .nav-link:hover{
+    background:rgba(255,255,255,.06);
+  }
+  .navbar-nav .btn{
+    width:100%;
+    justify-content:center;
+  }
+}
+
+</style>
 </head>
 <body>
 <header class="nav" style="position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(11,18,32,.55);border-bottom:1px solid rgba(255,255,255,.10)">
@@ -57,6 +121,38 @@
   <b>OB Truck photo (carousel)</b><br/>
   Source: Live Productions / LiveHD OB Trucks page.
   <a href="https://www.liveproductions.ae/OB-Trucks" target="_blank" rel="noopener">liveproductions.ae</a>
+</li>
+
+
+<li>
+  <b>Olympic rings image</b><br/>
+  Source: Wikimedia Commons “The Olympic Rings”. License: CC BY-SA 2.0.
+  <a href="https://commons.wikimedia.org/wiki/File:The_Olympic_Rings.jpg" target="_blank" rel="noopener">File page</a>
+</li>
+<li>
+  <b>FIFA World Cup trophy image</b><br/>
+  Source: Wikimedia Commons “FIFA World Cup Trophy 2015”. License: CC BY-SA 2.0.
+  <a href="https://commons.wikimedia.org/wiki/File:FIFA_World_Cup_Trophy_2015.jpg" target="_blank" rel="noopener">File page</a>
+</li>
+<li>
+  <b>UEFA European Championship trophy image</b><br/>
+  Source: Wikimedia Commons “Coupe Henri Delaunay 2017”. (See file page for licensing/attribution.)
+  <a href="https://commons.wikimedia.org/wiki/File:Coupe_Henri_Delaunay_2017.jpg" target="_blank" rel="noopener">File page</a>
+</li>
+<li>
+  <b>Formula One car image</b><br/>
+  Source: Wikimedia Commons “At London 2025 901 - Formula One car”. License: CC BY-SA 4.0 (attribute Mike Peel).
+  <a href="https://commons.wikimedia.org/wiki/File:At_London_2025_901_-_Formula_One_car.jpg" target="_blank" rel="noopener">File page</a>
+</li>
+<li>
+  <b>UFC Octagon image</b><br/>
+  Source: Wikimedia Commons “UFC-Octagon-USMCPhoto.jpg”. Public domain (US military photo).
+  <a href="https://commons.wikimedia.org/wiki/File:UFC-Octagon-USMCPhoto.jpg" target="_blank" rel="noopener">File page</a>
+</li>
+<li>
+  <b>MTV Moonman trophy image</b><br/>
+  Source: Wikimedia Commons “MTV Moonman, Juliens Auctions Preview 2011-03-08”. (See file page for licensing/attribution.)
+  <a href="https://commons.wikimedia.org/wiki/File:MTV_Moonman,_Juliens_Auctions_Preview_2011-03-08.jpg" target="_blank" rel="noopener">File page</a>
 </li>
 
 </ul>
