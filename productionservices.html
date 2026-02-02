@@ -323,22 +323,43 @@
           <h3 style="margin:0 0 10px">Contact</h3>
           <p style="margin:0;color:var(--muted)">
             Email: <a class="btn" style="margin-top:10px" href="mailto:herny@melbroadcastproductions.com">herny@melbroadcastproductions.com</a><br/>
-            Phone/WhatsApp: <a class="btn" style="margin-top:10px" href="tel:+971564934585">+971 56 493 4585</a><br/>
+            Phone/WhatsApp: <a class="btn" style="margin-top:10px" href="tel:+971564934585">+971 56 493 4585</a>
+            <a class="btn" style="margin-top:10px" href="https://wa.me/971564934585" target="_blank" rel="noopener">WhatsApp</a><br/>
           </p>
           <p class="note">Include your event dates, location, and scope — we’ll reply with availability and a simple plan.</p>
         </div>
 
         <div class="card">
-          <h3 style="margin:0 0 10px">Preferred details to include</h3>
-          <ul class="list">
-            <li>Event name + dates</li>
-            <li>Location + venue</li>
-            <li>Call time / show time</li>
-            <li>Scope (talent, crew size, live/recorded)</li>
-            <li>Any stakeholders or approvals</li>
-          </ul>
+          <h3 style="margin:0 0 10px">Send a message</h3>
+          <form class="contact" action="mailto:herny@melbroadcastproductions.com" method="post" enctype="text/plain">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="Name" autocomplete="name" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="Company" autocomplete="organization" placeholder="Company / client" />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="Message" rows="5" placeholder="Event dates, location, scope, and any key requirements..." required></textarea>
+            </div>
+            <button class="btn primary" type="submit">Send</button>
+            <p class="note">This opens your email app. If you want a real web form (no email app), we can enable Netlify Forms (free).</p>
+          </form>
         </div>
       </div>
+<div class="card" style="margin-top:14px">
+        <h3 style="margin:0 0 10px">Preferred details to include</h3>
+        <ul class="list">
+          <li>Event name + dates</li>
+          <li>Location + venue</li>
+          <li>Call time / show time</li>
+          <li>Scope (teams, talent, live/recorded)</li>
+          <li>Stakeholders / approvals</li>
+        </ul>
+      </div>
+
     </section>
 
     <footer class="footer">
