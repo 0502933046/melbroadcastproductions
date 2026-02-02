@@ -29,3 +29,7 @@ Connect repo and deploy.
 - `productionservices.html` — Production services page (Herny Mulyani)
 
 (Note) productionservices.html is services-focused (not a LinkedIn CV page).
+
+- `references.html` — References / portfolio page (engineering + production)
+
+- references.html updated: added additional reference lists (OB vans + systems).
