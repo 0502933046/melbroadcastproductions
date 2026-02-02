@@ -108,6 +108,21 @@
   .cardish img.img-fluid{ height: 180px !important; }
 }
 
+
+
+/* Global Events: keep images boxed inside cards (not full-screen) */
+#cv-references .card img.img-fluid,
+#cv-references .cardish img.img-fluid{
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: cover !important;
+  display:block;
+}
+@media (max-width: 575.98px){
+  #cv-references .card img.img-fluid,
+  #cv-references .cardish img.img-fluid{ height: 180px !important; }
+}
+
 </style>
 </head>
 <body>
