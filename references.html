@@ -24,14 +24,42 @@
       --border:rgba(255,255,255,.12);
       --brand:#5eead4;
     }
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial}
+    html,body{overflow-x:hidden;margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial}
     a{color:inherit}
     .muted{color:var(--muted)}
     .cardish{background:var(--panel);border:1px solid var(--border);border-radius:18px}
     .soft{background:var(--panel2);border:1px solid var(--border);border-radius:18px}
     .btn-outline-light{border-color:rgba(255,255,255,.28)}
     .nav{background:rgba(11,18,32,.75)!important}
-  </style>
+  
+
+/* Mobile navbar fixes */
+.nav-inner { width: 100%; padding-left: 16px !important; padding-right: 16px !important; }
+.navbar { max-width: 100%; }
+.navbar-toggler { margin-left: auto; }
+.navbar-collapse { width: 100%; }
+.navbar-nav { width: 100%; }
+
+
+
+/* Responsive hero/header text sizing */
+@media (max-width: 575.98px){
+  .hero h1{ font-size: 34px !important; line-height: 1.05 !important; }
+  .hero p{ font-size: 15px !important; }
+  h2{ font-size: 22px !important; }
+  .kicker{ font-size: 12px !important; letter-spacing: .18em !important; }
+}
+
+
+
+/* Brand text: keep visible on mobile but smaller */
+@media (max-width: 575.98px){
+  .navbar-brand span{ display:inline !important; font-size: 14px !important; letter-spacing: .1px !important; }
+  .navbar-brand img{ height: 28px !important; }
+  .navbar-brand{ max-width: 75vw; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
+
+</style>
 </head>
 <body>
 <header class="nav" style="position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(11,18,32,.55);border-bottom:1px solid rgba(255,255,255,.10)">
